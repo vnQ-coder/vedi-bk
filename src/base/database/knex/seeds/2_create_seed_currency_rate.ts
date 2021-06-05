@@ -1,0 +1,112 @@
+import Knex, { Transaction } from "knex";
+import CurrencyRateDao from "../../../../modules/vendorAdmin/masterData/currencyRate/daoCurrencyRate";
+import CurrencyRateModel from "../../../../modules/vendorAdmin/masterData/currencyRate/modelCurrencyRate";
+
+export const seed = function (knex: Knex): Promise<CurrencyRateModel[]> {
+  return new CurrencyRateDao().upsertMany(knex as Transaction, [
+    {
+      id: "ebbc0fde-00b9-4ef9-aeed-c29e7464d195",
+      name: "PKR",
+      buyingRate: 54.213,
+      date: "2021-5-13",
+      sellingRate: 435.4,
+      unit: 3,
+    },
+    {
+      id: "befd84ae-24da-4ebb-b7de-a678dc66e13b",
+      name: "USD",
+      buyingRate: 3434.76,
+      date: "2021-11-11",
+      sellingRate: 324.12,
+      unit: 12,
+    },
+    {
+      id: "ebbc0fde-00b9-4ef9-aeed-c29e7464d199",
+      name: "AUD",
+      buyingRate: 54.213,
+      date: "2021-5-13",
+      sellingRate: 435.4,
+      unit: 3,
+    },
+    {
+      id: "befd84ae-24da-4ebb-b7de-a678dc66e13c",
+      name: "DKK",
+      buyingRate: 3434.76,
+      date: "2021-1-6",
+      sellingRate: 324.12,
+      unit: 12,
+    },
+    {
+      id: "ebbc0fde-00b9-4ef9-aeed-c29e7464d190",
+      name: "EUR",
+      buyingRate: 54.213,
+      date: "2021-5-13",
+      sellingRate: 435.4,
+      unit: 3,
+    },
+    {
+      id: "befd84ae-24da-4ebb-b7de-a678dc66e13d",
+      name: "CHF",
+      buyingRate: 3434.76,
+      date: "2021-1-9",
+      sellingRate: 324.12,
+      unit: 12,
+    },
+    {
+      id: "befd84ae-24da-4ebb-b7de-a678dc66e13e",
+      name: "CAD",
+      buyingRate: 3434.76,
+      date: "2021-1-3",
+      sellingRate: 324.12,
+      unit: 12,
+    },
+    {
+      id: "ebbc0fde-00b9-4ef9-aeed-c29e7464d196",
+      name: "CNY",
+      buyingRate: 54.213,
+      date: "2021-5-16",
+      sellingRate: 435.4,
+      unit: 3,
+    },
+    {
+      id: "befd84ae-24da-4ebb-b7de-a678dc66e14e",
+      name: "IND",
+      buyingRate: 3434.76,
+      date: "1/5/2021",
+      sellingRate: 324.12,
+      unit: 12,
+    },
+    {
+      id: "ebbc0fde-00b9-4ef9-aeed-c29e7464d176",
+      name: "PKR",
+      buyingRate: 54.213,
+      date: "2-6-2021",
+      sellingRate: 435.4,
+      unit: 3,
+    },
+    {
+      id: "ebbc0fde-00b9-4ef9-aeee-c29e7464d196",
+      name: "CND",
+      buyingRate: 524.213,
+      date: "2021-6-16",
+      sellingRate: 4352.4,
+      unit: 32,
+    },
+    {
+      id: "befd84ae-24da-4ebb-b7df-a678dc66e14e",
+      name: "AUD",
+      buyingRate: 3434.76,
+      date: "11/5/2021",
+      sellingRate: 324.12,
+      unit: 122,
+    },
+    {
+      id: "ebbc0fde-00b9-4ef9-aeef-c29e7464d176",
+      name: "PKR",
+      buyingRate: 54.213,
+      date: "12-1-2021",
+      sellingRate: 435.4,
+      unit: 5,
+    },
+  ]);
+};
